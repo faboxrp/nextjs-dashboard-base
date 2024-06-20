@@ -1,6 +1,4 @@
-import {
-  faAddressCard, faBell, faFileLines, faStar,
-} from '@fortawesome/free-regular-svg-icons'
+import { faAddressCard, faBell, faCalendarCheck, faFileLines, faRectangleList, faStar, faUser } from "@fortawesome/free-regular-svg-icons";
 import {
   faBug,
   faCalculator,
@@ -13,39 +11,79 @@ import {
   faPencil,
   faPuzzlePiece,
   faRightToBracket,
-} from '@fortawesome/free-solid-svg-icons'
-import React, { PropsWithChildren } from 'react'
-import { Badge } from 'react-bootstrap'
-import SidebarNavGroup from '@/components/Layout/Dashboard/Sidebar/SidebarNavGroup'
-import SidebarNavItem from '@/components/Layout/Dashboard/Sidebar/SidebarNavItem'
-import { getDictionary } from '@/locales/dictionary'
+  faDumbbell,
+  faPlus,
+  faListOl,
+  faListUl,
+  faDatabase,
+  faTable,
+  faBarsStaggered,
+  faPersonWalking,
+  faPeopleGroup,
+  faChalkboardUser,
+  faPersonChalkboard,
+  faGear,
+} from "@fortawesome/free-solid-svg-icons";
+import React, { PropsWithChildren } from "react";
+import { Badge } from "react-bootstrap";
+import SidebarNavGroup from "@/components/Layout/Dashboard/Sidebar/SidebarNavGroup";
+import SidebarNavItem from "@/components/Layout/Dashboard/Sidebar/SidebarNavItem";
+import { getDictionary } from "@/locales/dictionary";
+import { faBuromobelexperte } from "@fortawesome/free-brands-svg-icons";
 
 const SidebarNavTitle = (props: PropsWithChildren) => {
-  const { children } = props
+  const { children } = props;
 
-  return (
-    <li className="nav-title px-3 py-2 mt-3 text-uppercase fw-bold">{children}</li>
-  )
-}
+  return <li className="nav-title px-3 py-2 mt-3 text-uppercase fw-bold">{children}</li>;
+};
 
 export default async function SidebarNav() {
-  const dict = await getDictionary()
+  const dict = await getDictionary();
   return (
     <ul className="list-unstyled">
       <SidebarNavItem icon={faGauge} href="/">
         {dict.sidebar.items.dashboard}
-        <small className="ms-auto"><Badge bg="info" className="ms-auto">NEW</Badge></small>
+        <small className="ms-auto">
+          <Badge bg="info" className="ms-auto">
+            NEW
+          </Badge>
+        </small>
       </SidebarNavItem>
       <SidebarNavItem icon={faCode} href="/pokemons">
         {dict.sidebar.items.sample}
-        <small className="ms-auto"><Badge bg="danger" className="ms-auto">DEMO</Badge></small>
+        <small className="ms-auto">
+          <Badge bg="danger" className="ms-auto">
+            RUTINA
+          </Badge>
+        </small>
       </SidebarNavItem>
-      <SidebarNavTitle>{dict.sidebar.items.theme}</SidebarNavTitle>
-      <SidebarNavItem icon={faDroplet} href="#">{dict.sidebar.items.colors}</SidebarNavItem>
-      <SidebarNavItem icon={faPencil} href="#">{dict.sidebar.items.typography}</SidebarNavItem>
-      <SidebarNavTitle>{dict.sidebar.items.components}</SidebarNavTitle>
+      <SidebarNavTitle>{dict.sidebar.items.crossfit}</SidebarNavTitle>
 
-      <SidebarNavGroup toggleIcon={faPuzzlePiece} toggleText={dict.sidebar.items.base}>
+      <SidebarNavGroup toggleIcon={faBarsStaggered} toggleText={dict.sidebar.items.my_data}>
+        <SidebarNavItem icon={faPeopleGroup} href="#">
+          {dict.sidebar.items.participants}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faPersonChalkboard} href="#">
+          {dict.sidebar.items.instructors}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faDumbbell} href="#">
+          {dict.sidebar.items.exercises}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faListUl} href="#">
+          {dict.sidebar.items.steps}
+        </SidebarNavItem>
+      </SidebarNavGroup>
+
+      <SidebarNavItem href="#" icon={faPersonWalking}>
+        {dict.sidebar.items.routines}
+      </SidebarNavItem>
+      <SidebarNavItem href="#" icon={faCalendarCheck}>
+        {dict.sidebar.items.programs}
+      </SidebarNavItem>
+
+      {/* <SidebarNavTitle>{dict.sidebar.items.components}</SidebarNavTitle>
+
+      <SidebarNavGroup toggleIcon={faDumbbell} toggleText={dict.sidebar.items.base}>
         <SidebarNavItem href="#">{dict.sidebar.items.accordion}</SidebarNavItem>
         <SidebarNavItem href="#">{dict.sidebar.items.breadcrumb}</SidebarNavItem>
         <SidebarNavItem href="#">{dict.sidebar.items.cards}</SidebarNavItem>
@@ -69,7 +107,9 @@ export default async function SidebarNav() {
         <SidebarNavItem href="#">{dict.sidebar.items.dropdowns}</SidebarNavItem>
       </SidebarNavGroup>
 
-      <SidebarNavItem icon={faChartPie} href="#">{dict.sidebar.items.charts}</SidebarNavItem>
+      <SidebarNavItem icon={faChartPie} href="#">
+        {dict.sidebar.items.charts}
+      </SidebarNavItem>
 
       <SidebarNavGroup toggleIcon={faFileLines} toggleText={dict.sidebar.items.forms}>
         <SidebarNavItem href="#">{dict.sidebar.items.form_control}</SidebarNavItem>
@@ -97,20 +137,22 @@ export default async function SidebarNav() {
 
       <SidebarNavItem icon={faCalculator} href="#">
         {dict.sidebar.items.widgets}
-        <small className="ms-auto"><Badge bg="info">NEW</Badge></small>
+        <small className="ms-auto">
+          <Badge bg="info">NEW</Badge>
+        </small>
       </SidebarNavItem>
-
+*/}
       <SidebarNavTitle>{dict.sidebar.items.extras}</SidebarNavTitle>
 
-      <SidebarNavGroup toggleIcon={faStar} toggleText={dict.sidebar.items.pages}>
-        <SidebarNavItem icon={faRightToBracket} href="login">{dict.sidebar.items.login}</SidebarNavItem>
-        <SidebarNavItem icon={faAddressCard} href="register">{dict.sidebar.items.register}</SidebarNavItem>
-        <SidebarNavItem icon={faBug} href="#">{dict.sidebar.items.error404}</SidebarNavItem>
-        <SidebarNavItem icon={faBug} href="#">{dict.sidebar.items.error500}</SidebarNavItem>
+      <SidebarNavGroup toggleIcon={faGear} toggleText={dict.sidebar.items.config}>
+        <SidebarNavItem icon={faUser} href="login">
+          {dict.sidebar.items.my_account}
+        </SidebarNavItem>
       </SidebarNavGroup>
 
-      <SidebarNavItem icon={faFileLines} href="#">{dict.sidebar.items.docs}</SidebarNavItem>
-      <SidebarNavItem icon={faLayerGroup} href="https://coreui.io/pro/">{dict.sidebar.items.try_core_ui_pro}</SidebarNavItem>
+      <SidebarNavItem icon={faFileLines} href="#">
+        {dict.sidebar.items.docs}
+      </SidebarNavItem>
     </ul>
-  )
+  );
 }
