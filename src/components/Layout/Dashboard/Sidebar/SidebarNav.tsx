@@ -51,39 +51,17 @@ export default async function SidebarNav() {
       </SidebarNavItem>
       <SidebarNavItem icon={faCode} href="/pokemons">
         {dict.sidebar.items.sample}
-        <small className="ms-auto">
-          <Badge bg="danger" className="ms-auto">
-            RUTINA
-          </Badge>
-        </small>
       </SidebarNavItem>
-      <SidebarNavTitle>{dict.sidebar.items.crossfit}</SidebarNavTitle>
-
-      <SidebarNavGroup toggleIcon={faBarsStaggered} toggleText={dict.sidebar.items.my_data}>
-        <SidebarNavItem icon={faPeopleGroup} href="/participants">
-          {dict.sidebar.items.participants}
-        </SidebarNavItem>
-        <SidebarNavItem icon={faPersonChalkboard} href="#">
-          {dict.sidebar.items.instructors}
-        </SidebarNavItem>
-        <SidebarNavItem icon={faDumbbell} href="#">
-          {dict.sidebar.items.exercises}
-        </SidebarNavItem>
-        <SidebarNavItem icon={faListUl} href="#">
-          {dict.sidebar.items.steps}
-        </SidebarNavItem>
-      </SidebarNavGroup>
-
-      <SidebarNavItem href="#" icon={faPersonWalking}>
-        {dict.sidebar.items.routines}
+      <SidebarNavTitle>{dict.sidebar.items.theme}</SidebarNavTitle>
+      <SidebarNavItem icon={faDroplet} href="#">
+        {dict.sidebar.items.colors}
       </SidebarNavItem>
-      <SidebarNavItem href="#" icon={faCalendarCheck}>
-        {dict.sidebar.items.programs}
+      <SidebarNavItem icon={faPencil} href="#">
+        {dict.sidebar.items.typography}
       </SidebarNavItem>
+      <SidebarNavTitle>{dict.sidebar.items.components}</SidebarNavTitle>
 
-      {/* <SidebarNavTitle>{dict.sidebar.items.components}</SidebarNavTitle>
-
-      <SidebarNavGroup toggleIcon={faDumbbell} toggleText={dict.sidebar.items.base}>
+      <SidebarNavGroup toggleIcon={faPuzzlePiece} toggleText={dict.sidebar.items.base}>
         <SidebarNavItem href="#">{dict.sidebar.items.accordion}</SidebarNavItem>
         <SidebarNavItem href="#">{dict.sidebar.items.breadcrumb}</SidebarNavItem>
         <SidebarNavItem href="#">{dict.sidebar.items.cards}</SidebarNavItem>
@@ -141,17 +119,29 @@ export default async function SidebarNav() {
           <Badge bg="info">NEW</Badge>
         </small>
       </SidebarNavItem>
-*/}
+
       <SidebarNavTitle>{dict.sidebar.items.extras}</SidebarNavTitle>
 
-      <SidebarNavGroup toggleIcon={faGear} toggleText={dict.sidebar.items.config}>
-        <SidebarNavItem icon={faUser} href="login">
-          {dict.sidebar.items.my_account}
+      <SidebarNavGroup toggleIcon={faStar} toggleText={dict.sidebar.items.pages}>
+        <SidebarNavItem icon={faRightToBracket} href="login">
+          {dict.sidebar.items.login}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faAddressCard} href="register">
+          {dict.sidebar.items.register}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faBug} href="#">
+          {dict.sidebar.items.error404}
+        </SidebarNavItem>
+        <SidebarNavItem icon={faBug} href="#">
+          {dict.sidebar.items.error500}
         </SidebarNavItem>
       </SidebarNavGroup>
 
       <SidebarNavItem icon={faFileLines} href="#">
         {dict.sidebar.items.docs}
+      </SidebarNavItem>
+      <SidebarNavItem icon={faLayerGroup} href="https://coreui.io/pro/">
+        {dict.sidebar.items.try_core_ui_pro}
       </SidebarNavItem>
     </ul>
   );
