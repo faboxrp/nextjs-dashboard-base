@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import { Container } from 'react-bootstrap'
-import HeaderSidebarToggler from '@/components/Layout/Dashboard/Header/HeaderSidebarToggler'
-import HeaderFeaturedNav from '@/components/Layout/Dashboard/Header/HeaderFeaturedNav'
-import HeaderNotificationNav from '@/components/Layout/Dashboard/Header/HeaderNotificationNav'
-import HeaderProfileNav from '@/components/Layout/Dashboard/Header/HeaderProfileNav'
-import Breadcrumb from '@/components/Layout/Dashboard/Breadcrumb/Breadcrumb'
+import Link from "next/link";
+import { Container } from "react-bootstrap";
+import HeaderSidebarToggler from "@/components/Layout/Dashboard/Header/HeaderSidebarToggler";
+import HeaderFeaturedNav from "@/components/Layout/Dashboard/Header/HeaderFeaturedNav";
+import HeaderNotificationNav from "@/components/Layout/Dashboard/Header/HeaderNotificationNav";
+import HeaderProfileNav from "@/components/Layout/Dashboard/Header/HeaderProfileNav";
+import Breadcrumb from "@/components/Layout/Dashboard/Breadcrumb/Breadcrumb";
 
 export default function Header() {
   return (
@@ -13,7 +13,8 @@ export default function Header() {
         <HeaderSidebarToggler />
         <Link href="/" className="header-brand d-md-none">
           <svg width="80" height="46">
-            <title>CoreUI Logo</title>
+            <title>Smart Crossfit Logo</title>
+            {/* <use xlinkHref="/assets/brand/coreui.svg" /> */}
             <use xlinkHref="/assets/brand/coreui.svg#full" />
           </svg>
         </Link>
@@ -32,5 +33,5 @@ export default function Header() {
         <Breadcrumb />
       </Container>
     </header>
-  )
+  );
 }

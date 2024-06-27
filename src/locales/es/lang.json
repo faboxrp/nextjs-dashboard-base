@@ -161,6 +161,22 @@
       }
     }
   },
+  "participants": {
+    "title": "Participantes",
+    "add_new": "Agregar nuevo",
+    "attribute": {
+      "name": "Nombre",
+      "email": "Email",
+      "phone": "Teléfono",
+      "birthdate": "Fecha nacimiento",
+      "gender": "Género",
+      "gender_type": {
+        "male": "Masculino",
+        "female": "Femenino",
+        "other": "Otro"
+      }
+    }
+  },
   "pokemons": {
     "title": "Pokémon",
     "add_new": "Agregar nuevo",
@@ -271,8 +287,20 @@
   },
   "sidebar": {
     "items": {
-      "dashboard": "Tablero",
+      "dashboard": "Dashboard",
       "sample": "Muestra",
+      "crossfit": "Crossfit",
+      "my_data": "Mis datos",
+      "participants": "Participantes",
+      "instructors": "Instructores",
+      "exercises": "Ejercicios",
+      "list": "Listado",
+      "new": "Nuevo",
+      "steps": "Etapas",
+      "routines": "Rutinas",
+      "programs": "Programas",
+      "config": "Configuración",
+      "my_account": "Mi cuenta",
       "theme": "Tema",
       "colors": "Colores",
       "typography": "Tipografía",

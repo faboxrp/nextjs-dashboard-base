@@ -12,15 +12,15 @@ class RetryableError extends Error {}
  */
 export default async function serverFetch(...args: FetchArguments): Promise<Response> {
   let retryCount = 0;
-  const maxRetries = 10;
-  // const maxRetries = 3;
-  const timeout = 300_000; // 30 seconds
+  const maxRetries = 3;
+  const timeout = 10_000; // 10 seconds
+  // const timeout = 30_000; // 30 seconds
   let success = false;
 
   while (retryCount < maxRetries && !success) {
     try {
       // eslint-disable-next-line no-await-in-loop
-      const response = await fetch(args[0], { ...args[1], signal: AbortSignal.timeout(timeout) });
+      const response = await fetch(args[0], { ...args[1], signal: AbortSignal.timeout(timeout), cache: "no-store" });
 
       if (!response.ok) {
         const statusCode = response.status;

@@ -23,15 +23,15 @@ export default function HeaderLocale({ currentLocale }: { currentLocale: string 
         <FontAwesomeIcon icon={faLanguage} size="lg" />
       </DropdownToggle>
       <DropdownMenu className="pt-0" align="end">
-        <DropdownItem active={locale === "en"} onClick={() => changeLocale("en")}>
-          English
-        </DropdownItem>
         <DropdownItem active={locale === "es"} onClick={() => changeLocale("es")}>
           Español
         </DropdownItem>
-        <DropdownItem active={locale === "ja"} onClick={() => changeLocale("ja")}>
-          日本語
+        <DropdownItem active={locale === "en"} onClick={() => changeLocale("en")}>
+          English
         </DropdownItem>
+        {/* <DropdownItem active={locale === "ja"} onClick={() => changeLocale("ja")}>
+          日本語
+        </DropdownItem> */}
       </DropdownMenu>
     </Dropdown>
   );

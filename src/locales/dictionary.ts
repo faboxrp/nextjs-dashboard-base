@@ -3,9 +3,9 @@ import { cookies } from "next/headers";
 import { defaultLocale } from "@/locales/config";
 
 const dictionaries = {
-  en: () => import("./en/lang.json").then((module) => module.default),
   es: () => import("./es/lang.json").then((module) => module.default),
-  ja: () => import("./ja/lang.json").then((module) => module.default),
+  en: () => import("./en/lang.json").then((module) => module.default),
+  // ja: () => import("./ja/lang.json").then((module) => module.default),
 };
 
 type Locale = keyof typeof dictionaries;
